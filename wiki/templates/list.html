@@ -2,10 +2,11 @@
 {% block content %}
 
 
-{% for page in pages %}
+{% for pages in pages %}
 
-{{ page.title }}
-{{ page.author }}
+  <h1>{{ pages.title }}</h1>
+  {{ pages.author }}
+  {{ pages.content }}
 
 {% endfor %}
 {% endblock %}
