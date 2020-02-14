@@ -1,6 +1,6 @@
 from django.urls import path
 from django.conf.urls import url
-from wiki.views import PageListView, PageDetailView
+from wiki.views import PageList, PageDetailView
 
 
 """
@@ -15,6 +15,7 @@ from wiki.views import PageListView, PageDetailView
   """
 
 urlpatterns = [
-    path('', PageListView.as_view(), name='wiki-list-page'),
+    path('', PageList.as_view(), name='wiki-list-page'),
     path('<str:slug>/', PageDetailView.as_view(), name='wiki-details-page'),
 ]
+
